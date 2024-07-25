@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/notes';
+const API_URL = 'https://note-app-five-lake.vercel.app/api/notes';
 
 export const saveNote = async (note: { title: string; content: string }) => {
   try {
