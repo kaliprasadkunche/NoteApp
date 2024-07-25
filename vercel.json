@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/src/app.ts",
+        "use": "@vercel/node",
+        "config": {
+          "maxLambdaSize": "50mb"
+        }
+      }
+    ],
+    "env": {
+      "MONGO_URI": "@mongo_uri",
+      "PORT": "5000"
+    },
+    "routes": [
+      {
+        "src": "/api/notes",
+        "dest": "/backend/src/app.ts"
+      }
+    ]
+  }
+  
